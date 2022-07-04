@@ -49,23 +49,13 @@ public class Main {
             System.out.println("Pidoras");
             return;
         }
-        int sum;
-        switch (z){
-            case 1:
-                sum = y + x;
-                break;
-            case 2:
-                sum = y - x;
-                break;
-            case 3:
-                sum = y / x;
-                break;
-            case 4:
-                sum = y * x;
-                break;
-            default:
-                sum = -1;
-        }
+        int sum = switch (z) {
+            case 1 -> y + x;
+            case 2 -> y - x;
+            case 3 -> y / x;
+            case 4 -> y * x;
+            default -> -1;
+        };
         System.out.println(sum);
         scanner.close();
     }
